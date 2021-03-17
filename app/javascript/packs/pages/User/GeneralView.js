@@ -8,7 +8,6 @@ import { connect } from 'react-redux';
 
 import './GeneralView.scss';
 import ProfileEditView from "./Edit/ProfileEditView";
-import Invoices from "../Subscription/Invoices";
 
 class GeneralView extends Component {
   componentDidMount() {
@@ -31,7 +30,6 @@ class GeneralView extends Component {
               </div>
 
               <Panel><ProfileEditView /></Panel>
-              <Panel><Invoices /></Panel>
             </Tabs>
           </div>
         <Footer />

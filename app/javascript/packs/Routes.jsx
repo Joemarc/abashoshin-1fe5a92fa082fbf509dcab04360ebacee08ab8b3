@@ -6,13 +6,10 @@ import ArticleView from "./pages/Article/View/ArticleView"
 import Login from "./pages/Auth/Login/login"
 import SignUp from "./pages/Auth/SignUp/signup";
 import News from "./pages/News/News";
-import ProfileEditView from "./pages/User/Edit/ProfileEditView";
 import DetailedFormation from "./pages/Formation/DetailedFormation";
 import Formations from "./pages/Formation/Formations";
 import HomePage from "./pages/Home/HomePage";
-import Payment from "./pages/Payment/Payment";
 import GeneralView from "./pages/User/GeneralView";
-import Plan from "./pages/Subscription/Plans/Plan";
 
 const Routes = () => {
   return (
@@ -26,8 +23,6 @@ const Routes = () => {
         <Route exact path="/users/profile" component={GeneralView} />
         <Route path="/formations/:id" component={DetailedFormation} />
         <Route exact path="/formations" component={Formations} />
-        <Route exact path="/adhesion" component={Plan} />
-        <Route exact path="/adhesion/paiement" component={Payment} />
       </Switch>
       <ToastMessage />
     </BrowserRouter>
