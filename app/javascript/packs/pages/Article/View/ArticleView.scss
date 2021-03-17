@@ -1,0 +1,27 @@
+@import "../../../src/styles/application";
+
+.article-view {
+  width: 90%;
+  margin: auto;
+}
+.article-related {
+  display: block;
+  margin-bottom: 20px;
+  & > * {
+    margin-bottom: 20px;
+  }
+}
+
+@include forTabletPortraitUp {
+  .article-view {
+    width: 60%;
+  }
+
+  .article-related {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      width: 32%;
+    }
+  }
+}

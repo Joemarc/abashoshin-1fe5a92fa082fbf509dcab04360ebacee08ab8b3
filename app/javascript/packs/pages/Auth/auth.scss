@@ -1,0 +1,66 @@
+@import "../../src/styles/application";
+
+.page-container {
+  margin: auto;
+}
+
+.page-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+  background-color: white;
+}
+.form-infos-container {
+  width: 40%;
+  background-color: white;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  color: #2D3748;
+  input {
+    border: 1px solid $greyColor;
+    background: transparent;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.bottom-text {
+  width: 100%;
+  color: #2D3748;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.log-submit {
+  @include btnMainRed;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+@include forTabletLandscapeUp {
+  .page-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1170px;
+    min-height: 100vh;
+  }
+}

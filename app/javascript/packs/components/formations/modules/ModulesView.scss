@@ -1,0 +1,52 @@
+@import "../../../src/styles/application";
+
+.module-container {
+  background-color: transparent;
+  padding: 20px 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #008891;
+}
+
+.module-container-top-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  color: #008891;
+  & > * {
+    width: 90%;
+  }
+}
+
+.module-container-top-infos span {
+  font-size: 16px;
+  color: #008891;
+}
+
+.module-description {
+  font-size: 16px;
+  color: grey;
+}
+
+.view-more {
+  width: 100%;
+  border-top: 2px solid #008891;
+  display: flex;
+  justify-content: center;
+}
+
+.fas {
+  color: #008891;
+}
+
+@include forTabletPortraitUp {
+  .module-container-top-infos {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    & > * {
+      width: 33%;
+    }
+  }
+}

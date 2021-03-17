@@ -1,0 +1,91 @@
+@import "../../src/styles/application";
+@import "../Video/List/Videos";
+@import "../../components/videos/VideoCard";
+
+
+.empty-div {
+  height: 50px;
+}
+.headline-articles-container {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0 0;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 3px solid black;
+  padding: 50px 0;
+  & > * {
+    width: 100%;
+  }
+}
+.following-articles-container {
+  width: 90%;
+  margin: auto;
+}
+
+.following-articles {
+  display: block;
+  border-top: 3px solid black;
+  padding: 50px 0;
+}
+
+.following-articles-content {
+  padding: 30px 0 50px;
+}
+
+.title-page-articles {
+  font-size: 30px;
+}
+
+.page-video-container {
+  background-color: $customBlack;
+  color: white;
+}
+
+.videos-container {
+  border-top: 3px solid white;
+}
+
+.videos-content {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.video-card {
+  background-color: transparent;
+}
+
+.video-card--preview {
+  color: white;
+}
+
+.video-card--title {
+  color: white;
+  font-size: 20px;
+}
+
+@include forTabletPortraitUp {
+  .page-articles-container {
+  }
+  .articles-container {
+    flex-direction: row;
+    justify-content: space-between;
+    & > * {
+      width: 33%;
+    }
+  }
+
+  .following-articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & > * {
+      width: 25%;
+    }
+  }
+}

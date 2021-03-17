@@ -1,0 +1,78 @@
+@import "../../src/styles/application";
+
+.article-header {
+  max-width: 1170px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.top-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.article-cat {
+  border-bottom: 1px solid black;
+  font-size: 13px;
+}
+
+.article-title {
+  margin-top: 20px;
+}
+
+.article-content {
+  margin-top: 20px;
+}
+
+.divider {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+
+.date-article {
+  width: 35%;
+  font-size: 13px;
+}
+
+.social-media {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  color: $customBlack;
+}
+
+.social-media a {
+  color: $customBlack;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 0 10px;
+}
+
+.article-return {
+  font-size: 13px;
+  text-decoration: none;
+  color: $greyColorDark;
+}
+
+@include forTabletPortraitUp {
+  .article-header {
+    width: 60%;
+  }
+
+  .date-article {
+    width: 30%;
+  }
+
+  .social-media {
+    width: 20%;
+  }
+}
