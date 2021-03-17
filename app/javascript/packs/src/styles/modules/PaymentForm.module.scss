@@ -1,0 +1,193 @@
+@import "../common/colors";
+
+.paymentForm {
+  background-color: #fff;
+}
+
+.paymentForm_Row {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.paymentForm_Row__Halves {
+  justify-content: space-between;
+}
+
+.paymentForm_Field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.paymentForm_Field.paymentForm_Field__HalfWidth {
+  width: 48%;
+}
+
+.paymentForm_Field.quarter-width {
+  width: calc(25% - 10px);
+}
+
+.paymentForm_Baseline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #cfd7df;
+  transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.paymentForm_Label {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 8px;
+  color: #cfd7df;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform-origin: 0 50%;
+  cursor: text;
+  transition-property: color, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.paymentForm_Input {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 7px;
+  color: #32325d;
+  background-color: transparent;
+
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+    color: transparent;
+    transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+.paymentForm_Input.paymentForm_Input__Empty {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused,
+.paymentForm_Input:not(.paymentForm_Input__Empty) {
+  opacity: 1;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused::-webkit-input-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty)::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused::-moz-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty)::-moz-placeholder {
+  color: #cfd7df;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused:-ms-input-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty):-ms-input-placeholder {
+  color: #cfd7df;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused + .paymentForm_Label,
+.paymentForm_Input:not(.paymentForm_Input__Empty) + .paymentForm_Label {
+  color: #aab7c4;
+  transform: scale(0.85) translateY(-25px);
+  cursor: default;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused + .paymentForm_Label {
+  color: #24b47e;
+}
+
+.paymentForm_Input.paymentForm_Input__Invalid + .paymentForm_Label {
+  color: #ffa27b;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused + .paymentForm_Label + .paymentForm_Baseline {
+  background-color: #24b47e;
+}
+
+.paymentForm_Input__Focused.paymentForm_Input__Invalid + .paymentForm_Label + .paymentForm_Baseline {
+  background-color: #e25950;
+}
+
+.paymentForm input, .paymentForm_ButtonSubmit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+  margin: 20px 0;
+}
+
+.paymentForm__Input:-webkit-autofill {
+  -webkit-text-fill-color: #e39f48;
+  transition: background-color 100000000s;
+  -webkit-animation: 1ms void-animation-out;
+}
+
+.paymentForm .StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.paymentForm input, .paymentForm_ButtonSubmit {
+  -webkit-animation: 1ms void-animation-out;
+}
+
+span.paymentForm_Input_Brand {
+  width: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  color: $greyColorDark;
+  margin-right: 5px;
+}
+
+.paymentForm_Terms {
+  margin: 30px 0;
+
+  > * {
+    display: flex;
+  }
+}
+
+.paymentForm_Terms_Link {
+  color: $redColor;
+}
+
+.paymentForm_ButtonSubmit {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-color: #24b47e;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:disabled {
+    background-color: rgba(#24b47e, .25);
+  }
+}
+
+.paymentForm_Secure {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.paymentForm_Secure_Link {
+  display: block;
+}
+
+.paymentForm_Secure_Image {
+  max-width: 340px;
+  width: 100%;
+}
