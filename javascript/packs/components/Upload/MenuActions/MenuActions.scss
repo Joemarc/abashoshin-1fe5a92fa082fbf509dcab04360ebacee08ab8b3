@@ -1,0 +1,27 @@
+@import "../../../src/styles/application";
+
+.menu-actions {
+  display: flex;
+}
+
+.menu-actions__item {
+  margin: 0 2px;
+  padding: 0 2px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-actions__item--disabled {
+  opacity: .75;
+}
+
+.menu-actions--white-theme .menu-actions__item {
+  color: white;
+}
+
+.menu-actions--grey-theme .menu-actions__item {
+  color: $greyColorDark;
+}

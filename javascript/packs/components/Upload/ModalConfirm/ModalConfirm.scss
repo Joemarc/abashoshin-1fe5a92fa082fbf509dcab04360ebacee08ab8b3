@@ -1,0 +1,60 @@
+@import "../../../src/styles/application";
+
+.ReactModal__modal-confirm__Body--open {
+  overflow: hidden;
+}
+
+.ReactModal__modal-confirm__Content--after-open {
+  outline: none;
+  background-color: white;
+  padding: 10px;
+  white-space: pre-line;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.ReactModal__modal-confirm__Overlay--after-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .85);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-confirm-container {
+  position: relative;
+}
+
+.modal-confirm-container__title {
+  font-size: 20px;
+  color: $greyColorDark;
+}
+
+.modal-confirm-container__actions {
+  text-align: right;
+}
+
+.modal-confirm-container__actions__button-cancel {
+  @include btnTransparentColored($blackColor);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.modal-confirm-info .modal-confirm-container__actions__button-confirm {
+  @include btnMainColored($greenColorLight);
+  cursor: pointer;
+}
+
+.modal-confirm-danger .modal-confirm-container__actions__button-confirm {
+  @include btnMainColored($redColorLight);
+  cursor: pointer;
+}
+
+.modal-confirm-container__main {
+  margin-bottom: 20px;
+}

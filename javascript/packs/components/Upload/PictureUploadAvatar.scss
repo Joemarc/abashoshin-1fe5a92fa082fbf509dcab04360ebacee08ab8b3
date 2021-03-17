@@ -1,0 +1,83 @@
+@import "../../src/styles/application";
+
+.picture-upload-avatar {
+  width: 100%;
+  height: 200px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.picture-upload-avatar__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.picture-upload-avatar-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 7px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picture-upload-avatar-image__menu-actions-wrapper {
+  position: absolute;
+  z-index: $zIndexDefault;
+  top: 10px;
+  right: 0;
+  border-radius: 50%;
+
+  .menu-actions__item__delete {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+}
+
+.picture-upload-avatar__professional {
+  .picture-upload-avatar-image, .picture-upload-avatar-default {
+    border-color: $redColor;
+  }
+
+  .picture-upload-avatar-image__menu-actions-wrapper {
+    background-color: $redColor;
+  }
+}
+
+.picture-upload-avatar__applicant {
+  .picture-upload-avatar-image, .picture-upload-avatar-default {
+    border-color: $blueColor;
+  }
+
+  .picture-upload-avatar-image__menu-actions-wrapper {
+    background-color: $blueColor;
+  }
+}
+
+.picture-upload-avatar-default {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  border: 2px dashed white;
+
+  .icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+}
+
+.green-color {
+  color: #1EDD88;
+}

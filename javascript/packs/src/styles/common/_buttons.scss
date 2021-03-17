@@ -1,0 +1,58 @@
+@import "./colors";
+
+%btn {
+  padding: 5px 10px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  display: inline-block;
+
+  &:disabled {
+    cursor: initial;
+    opacity: .25;
+  }
+}
+
+@mixin btnMainColored($color) {
+  @extend %btn;
+  color: white;
+  background-color: $color;
+  border: 1px solid $color;
+
+  &:hover, &:focus, &:active {
+    color: white;
+  }
+}
+
+@mixin btnTransparentColored($color) {
+  @extend %btn;
+  color: $color;
+  background-color: transparent;
+  border: 1px solid $color;
+
+  &:hover, &:focus, &:active {
+    color: $color;
+  }
+}
+
+@mixin btnMainRed {
+  @include btnMainColored($redColor);
+}
+
+@mixin btnMainBlue {
+  @include btnMainColored($blueColor);
+}
+
+@mixin btnFacebook {
+  @include btnMainColored($facebookColor);
+}
+
+@mixin btnMainBorderGreyDark {
+  @extend %btn;
+  background-color: transparent;
+  color: $greyColorDark;
+  border: 1px solid $greyColorDark;
+}

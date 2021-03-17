@@ -1,0 +1,26 @@
+@import "../../src/styles/application";
+
+.general-view-container {
+  width: 90%;
+  margin: auto;
+}
+
+.tab-btns {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.tabs-container {
+  display: flex;
+}
+
+@include forTabletPortraitUp {
+  .general-view-container {
+    width: 60%;
+    margin: auto;
+  }
+}
