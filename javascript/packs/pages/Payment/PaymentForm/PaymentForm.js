@@ -26,28 +26,7 @@ class PaymentForm extends Component {
     const { stripe, paymentFormDisabled, submitText, submitting } = this.props;
 
     return (
-      stripe ?
-        <div className={styles.paymentFormContainer}>
-          <form className={styles.paymentForm}>
-            <CreditCardElementsNumber />
-            <div className={`${styles.paymentForm_Row} ${styles.paymentForm_Row__Halves}`}>
-              <CreditCardElementsExpiration />
-              <CreditCardElementsCVC />
-            </div>
-
-            <button className={styles.paymentForm_ButtonSubmit} type="submit" onClick={this.handlePay}
-                    disabled={!stripe || paymentFormDisabled || submitting}>
-              {submitting ? <span>Paiement en cours... <i className="fas fa-spinner fa-spin" /></span> : submitText}
-            </button>
-          </form>
-
-          <div className={styles.paymentForm_Secure}>
-            <a href="https://stripe.com" target="_blank" rel="noopener noreferrer nofollow"
-               className={styles.paymentForm_Secure_Link}>
-              <img src={securePayment} alt="" className={styles.paymentForm_Secure_Image} />
-            </a>
-          </div>
-        </div> : <PaymentFormLoader />
+      <div>test</div>
     );
   }
 }
