@@ -3,3 +3,26 @@
 .paymentFormContainer {
   // Empty but should not be deleted (used as definition)
 }
+
+.paymentForm {
+  background-color: #fff;
+}
+
+.paymentForm_Row {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.paymentForm_Row__Halves {
+  justify-content: space-between;
+}
+
+.paymentForm_Field {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.paymentForm_Field.paymentForm_Field__HalfWidth {
+  width: 48%;
+}
