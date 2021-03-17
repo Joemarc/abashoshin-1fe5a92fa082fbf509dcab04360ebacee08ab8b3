@@ -71,3 +71,34 @@
     transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
+
+.paymentForm_Input.paymentForm_Input__Empty {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity;
+}
+
+.paymentForm_Input__Empty, .paymentForm_Input__Invalid {
+  // Empty but should not be deleted (used as definition)
+}
+
+.paymentForm_Input.paymentForm_Input__Focused,
+.paymentForm_Input:not(.paymentForm_Input__Empty) {
+  opacity: 1;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused::-webkit-input-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty)::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused::-moz-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty)::-moz-placeholder {
+  color: #cfd7df;
+}
+
+.paymentForm_Input.paymentForm_Input__Focused:-ms-input-placeholder,
+.paymentForm_Input:not(.paymentForm_Input__Empty):-ms-input-placeholder {
+  color: #cfd7df;
+}
+
