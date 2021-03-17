@@ -124,35 +124,3 @@
 .paymentForm_Input__Focused.paymentForm_Input__Invalid + .paymentForm_Label + .paymentForm_Baseline {
   background-color: #e25950;
 }
-
-.paymentForm input, .paymentForm_ButtonSubmit {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border-style: none;
-  margin: 20px 0;
-}
-
-.paymentForm__Input:-webkit-autofill {
-  -webkit-text-fill-color: #e39f48;
-  transition: background-color 100000000s;
-  -webkit-animation: 1ms void-animation-out;
-}
-
-.paymentForm .StripeElement--webkit-autofill {
-  background: transparent !important;
-}
-
-.paymentForm input, .paymentForm_ButtonSubmit {
-  -webkit-animation: 1ms void-animation-out;
-}
-
-span.paymentForm_Input_Brand {
-  width: 30px;
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  color: $greyColorDark;
-  margin-right: 5px;
-}
