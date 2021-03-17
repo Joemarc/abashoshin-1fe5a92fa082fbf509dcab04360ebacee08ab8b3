@@ -133,9 +133,3 @@
   border-style: none;
   margin: 20px 0;
 }
-
-.paymentForm__Input:-webkit-autofill {
-  -webkit-text-fill-color: #e39f48;
-  transition: background-color 100000000s;
-  -webkit-animation: 1ms void-animation-out;
-}
